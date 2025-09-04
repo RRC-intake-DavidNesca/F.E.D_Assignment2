@@ -1,45 +1,49 @@
-<!-- This line tells the browser the document uses HTML5 -->
+<!-- Declares the document uses HTML5 -->
 <!DOCTYPE html>
-<!-- This line opens the root html element and sets the language to English -->
+<!-- Opens the root HTML element and sets the page language to English -->
 <html lang="en">
-  <!-- This section holds information about the page that is not displayed directly -->
+  <!-- Begins the head; metadata not shown directly on the page -->
   <head>
-    <!-- This sets the character encoding to UTF-8 so most characters show correctly -->
+    <!-- Sets character encoding so text renders correctly -->
     <meta charset="utf-8">
-    <!-- This makes the page fit the screen on phones and tablets -->
+    <!-- Enables responsive scaling on phones and tablets -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- This describes the page for search engines and accessibility tools -->
+    <!-- Short description for search engines and assistive tech -->
     <meta name="description" content="Personal Resume for David Nesca">
-    <!-- This is the text shown on the browser tab -->
+    <!-- Text shown in the browser tab -->
     <title>David Nesca — Resume</title>
+  <!-- Ends the head section -->
   </head>
 
-  <!-- This is where all visible content on the page goes -->
+  <!-- Begins the visible page content -->
   <body>
-    <!-- This is a skip link so keyboard users can jump past repeated content -->
+    <!-- Keyboard-friendly skip link to jump to the main content -->
     <a href="#main-content">Skip to main content</a>
 
-    <!-- This holds your name and tagline -->
+    <!-- Header holds your name, contact links, and profile image -->
     <header>
+      <!-- Main page heading: your name -->
       <h1>David Nesca</h1>
 
-      <!-- Contact links (keep the text simple and human; update these URLs) -->
+      <!-- Contact links; keep text short and clear -->
       <p>
-        <a href="mailto:you@example.com">you@example.com</a> ·
+        <a href="mailto:dnesca@rrc.ca">dnesca@rrc.ca</a> ·
         <a href="https://www.linkedin.com/in/YOUR-LINKEDIN">LinkedIn</a> ·
         <a href="https://github.com/YOUR-GITHUB">GitHub</a>
       </p>
 
-      <!-- One profile image with meaningful alt text -->
-      <!-- Using your current folder/file names exactly as shown earlier -->
+      <!-- Figure groups the image and its caption -->
       <figure>
+        <!-- Profile image with meaningful alternative text and simple width -->
         <img src="Images/Image1.jpg" alt="Headshot of David Nesca" width="160">
+        <!-- Short caption for the image -->
         <figcaption>Profile photo</figcaption>
       </figure>
     </header>
 
-    <!-- This provides quick links to sections on this page -->
+    <!-- Primary navigation for in-page sections -->
     <nav aria-label="Primary">
+      <!-- Unordered list that groups the nav items -->
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#education">Education</a></li>
@@ -49,87 +53,127 @@
       </ul>
     </nav>
 
-    <!-- This is the main content area of the page -->
+    <!-- Main landmark that contains the core content -->
     <main id="main-content">
+      <!-- About section introduces you -->
       <section id="about">
+        <!-- Section heading -->
         <h2>About</h2>
+        <!-- Brief paragraph about your focus -->
         <p>I am a student learning frontend development. I like clear, readable code and simple layouts.</p>
+        <!-- Brief paragraph about the purpose of this page -->
         <p>I am building this resume to practice semantic HTML and accessibility basics.</p>
       </section>
 
+      <!-- Education section lists your schooling -->
       <section id="education">
+        <!-- Section heading -->
         <h2>Education</h2>
 
+        <!-- One education entry -->
         <article>
+          <!-- Program and school name (ampersand encoded for validity) -->
           <h3>AD&amp;D — Red River</h3>
+          <!-- Location and dates -->
           <p>Winnipeg, MB · 2024 to Present</p>
+          <!-- Details as short bullet points -->
           <ul>
+            <!-- Coursework or focus area -->
             <li>Relevant coursework or focus area.</li>
+            <!-- Awards or notable achievements -->
             <li>Any award or notable achievement.</li>
           </ul>
+        <!-- Ends education entry -->
         </article>
+      <!-- Ends Education section -->
       </section>
 
+      <!-- Experience section lists roles or relevant work -->
       <section id="experience">
+        <!-- Section heading -->
         <h2>Experience</h2>
 
+        <!-- One experience entry -->
         <article>
+          <!-- Role and organization -->
           <h3>Placement home manager — New Directions</h3>
+          <!-- Dates and location -->
           <p>2023 to present · Winnipeg, MB</p>
+          <!-- Responsibilities/results as short bullets -->
           <ul>
+            <!-- Specific responsibility with context -->
             <li>Worked in group home with youth in the foster system, using a custom software to manage events and medication schedules.</li>
+            <!-- Another concise responsibility/result -->
             <li>Another concrete responsibility or result.</li>
           </ul>
+        <!-- Ends experience entry -->
         </article>
 
-        <!-- Optional: duplicate the <article> block for another role/project -->
-        <!--
-        <article>
-          <h3>Second Role — Organization</h3>
-          <p>Dates · City, Province</p>
-          <ul>
-            <li>Brief responsibility/result.</li>
-            <li>Another short point.</li>
-          </ul>
-        </article>
-        -->
+      <!-- Ends Experience section -->
       </section>
 
+      <!-- Skills section lists key abilities and includes an inline SVG icon -->
       <section id="skills">
+        <!-- Section heading with an accessible inline SVG icon -->
         <h2>
+          <!-- SVG icon labeled for assistive technologies -->
           <svg width="20" height="20" viewBox="0 0 24 24" role="img" aria-label="Star icon">
+            <!-- Star shape as a polygon -->
             <polygon points="12,2 15,9 22,9 16.5,13.5 18.5,21 12,16.8 5.5,21 7.5,13.5 2,9 9,9"></polygon>
           </svg>
+          <!-- Visible section title -->
           Skills
         </h2>
+        <!-- Short list of skills -->
         <ul>
+          <!-- Semantic HTML as a skill -->
           <li>HTML (semantic structure)</li>
+          <!-- Accessibility awareness as a skill -->
           <li>Accessibility basics</li>
+          <!-- Soft skills -->
           <li>Communication and teamwork</li>
         </ul>
+      <!-- Ends Skills section -->
       </section>
 
+      <!-- Projects section highlights your work -->
       <section id="projects">
+        <!-- Section heading -->
         <h2>Projects</h2>
 
+        <!-- One project entry -->
         <article>
+          <!-- Project title -->
           <h3>Portfolio Site</h3>
+          <!-- One-line summary -->
           <p>I have an undergrad degree in philosophy, but found that it was not very lucrative as other options. Now I am coding in html and working towards a different career!</p>
+          <!-- Project details as concise bullets -->
           <ul>
+            <!-- Structure and approach -->
             <li>Planned the page structure with semantic HTML.</li>
+            <!-- Focus on clarity -->
             <li>Focused on clear headings and readable content.</li>
+            <!-- Personal interest note -->
             <li>Otherwise I can talk for hours on the philosophy of existence, political philosophies, and language of logic.</li>
           </ul>
+        <!-- Ends project entry -->
         </article>
 
+      <!-- Ends Projects section -->
       </section>
 
+    <!-- Ends main content -->
     </main>
 
-    <!-- This contains closing information about the page -->
+    <!-- Footer contains page‑end information -->
     <footer>
-        <p>© 2025 David Nesca</p>
-        <p><a href="mailto:dnesca@rrc.ca">dnesca@rrc.ca</a></p>
+      <!-- Copyright :) -->
+      <p>© 2025 David Nesca</p>
+      <!-- Email link for easy contact -->
+      <p><a href="mailto:dnesca@rrc.ca">dnesca@rrc.ca</a></p>
+    <!-- Ends footer -->
     </footer>
+  <!-- Ends body -->
   </body>
+<!-- Ends the HTML document -->
 </html>
