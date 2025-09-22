@@ -42,8 +42,6 @@ I followed the assignment steps and worked in small chunks. After each chunk I t
 
 I kept each commit focused on **one change** so the history is easy to read.
 
----
-
 ## What challenges did I have?
 
 - **Layout choices**: Deciding when to use Grid vs Flex. I solved this by using **Grid** for big page layout (header/main) and **Flex** inside small rows (job header).  
@@ -51,8 +49,6 @@ I kept each commit focused on **one change** so the history is easy to read.
 - **Keyboard support**: I wanted keyboard users to move quickly. I added a **skip link**, made sure **focus outlines** are strong, and created an in‑page **nav** with anchors.  
 - **Accessibility**: I reviewed color contrast. The accent link color `#2563eb` on white has a contrast ratio that passes WCAG AA for normal text. The muted text `#6b7280` on white also passes AA.  
 - **Print/PDF**: Boxes looked heavy in print at first. I removed borders/shadows in the print stylesheet and forced a single column.
-
----
 
 ## What would I do differently now?
 
@@ -86,10 +82,10 @@ I kept each commit focused on **one change** so the history is easy to read.
 - I added a **skip link** and strong **focus outlines**.
 - I checked **color contrast** (AA pass as noted above).
 
-### 6) Testing and Refinement
+### 6 Testing and Refinement
 - I checked typography, spacing, hover, focus, and mobile behavior.
 - I created **print styles** so PDF export looks clean and single‑column.
 
-### 7) Final Review
+### 7 Final Review
 - I normalized heading spacing and link hover underline.
 - I cleaned up CSS groupings and kept variable names consistent.
