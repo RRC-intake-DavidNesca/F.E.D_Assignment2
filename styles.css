@@ -134,3 +134,11 @@ main.container{
   flex-wrap: wrap;
 /* This line sets or adjusts a CSS rule or property. */
 }
+/* Marks Step 3 font customization rules. */
+/* Custom Fonts */
+/* Reopens the body rule to apply the custom font stack. */
+body{
+/* Sets Inter as the primary font with safe fallbacks. */
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+/* Closes the body font rule. */
+}
