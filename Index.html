@@ -22,14 +22,14 @@
 <body>
 <!-- Provides a keyboard-accessible link to jump directly to the main content. -->
   <a class="skip-link" href="#main">Skip to content</a>
-<!-- Opens the page header and applies a centered container class. -->
-  <header class="container">
+<!-- Opens the page header, applies a centered container class, and sets the banner landmark for screen readers. -->
+  <header class="container" role="banner">
 <!-- Creates an inner wrapper for header layout. -->
     <div class="header-inner">
 <!-- Opens a wrapper for the profile photo. -->
       <div class="avatar-wrap">
-<!-- Displays the profile photo with descriptive alternative text for screen readers. -->
-        <img src="Images/Image1.jpg" alt="Headshot of David Nesca" width="160">
+<!-- Displays the profile photo, adds an avatar class for styling, and keeps descriptive alternative text. -->
+        <img class="avatar" src="Images/Image1.jpg" alt="Headshot of David Nesca" width="160">
 <!-- Closes the avatar wrapper. -->
       </div>
 <!-- Opens the identity block that holds name and contact details. -->
@@ -46,36 +46,54 @@
     </div>
 <!-- Closes the header section. -->
   </header>
-<!-- Opens the main content region and sets an id to support skip links. -->
-  <main class="container" id="main">
-<!-- Starts the About section and applies section styling hooks. -->
-    <section id="about" class="section">
-<!-- Names the section with a heading for screen readers and structure. -->
-      <h2>About</h2>
+<!-- Adds an in-page navigation bar with links to each section for quick access and better usability. -->
+  <nav class="container site-nav" role="navigation" aria-label="Section navigation">
+<!-- Starts the list of section links used for quick navigation. -->
+    <ul class="nav-list">
+<!-- Links to the About section. -->
+      <li><a href="#about">About</a></li>
+<!-- Links to the Education section. -->
+      <li><a href="#education">Education</a></li>
+<!-- Links to the Experience section. -->
+      <li><a href="#experience">Experience</a></li>
+<!-- Links to the Skills section. -->
+      <li><a href="#skills">Skills</a></li>
+<!-- Links to the Projects section. -->
+      <li><a href="#projects">Projects</a></li>
+<!-- Closes the navigation list. -->
+    </ul>
+<!-- Closes the navigation element. -->
+  </nav>
+<!-- Opens the main content region, applies a centered container, sets an id to support skip links, and marks it as the main landmark. -->
+  <main class="container" id="main" role="main">
+<!-- Starts the About section, applies section styling hooks, and connects it to its heading for screen readers. -->
+    <section id="about" class="section" aria-labelledby="about-heading">
+<!-- Names the section with a heading and provides an id used by aria-labelledby. -->
+      <h2 id="about-heading">About</h2>
 <!-- Adds the first paragraph of the About blurb. -->
       <p>I am studying frontend development and practicing clean, accessible layouts.</p>
 <!-- Adds a second paragraph of the About blurb. -->
       <p>This resume demonstrates semantic HTML and CSS fundamentals.</p>
 <!-- Closes the About section. -->
     </section>
-<!-- Opens the Education section. -->
-    <section id="education" class="section">
-<!-- Labels the Education section. -->
-      <h2>Education</h2>
+<!-- Opens the Education section, applies styling, and ties the section to its heading for assistive tech. -->
+    <section id="education" class="section" aria-labelledby="education-heading">
+<!-- Labels the Education section and gives the heading an id for aria-labelledby. -->
+      <h2 id="education-heading">Education</h2>
 <!-- Starts a list of education highlights. -->
       <ul>
 <!-- Adds an education highlight list item. -->
-        <li>Relevant coursework or focus area.</li>
+        <li>RRC Ad&d coursework.</li>
 <!-- Adds another education highlight list item. -->
-        <li>Any award or notable achievement.</li>
+        <li>Previous university degree.</li>
 <!-- Closes the education list. -->
       </ul>
 <!-- Closes the Education section. -->
     </section>
-<!-- Opens the Experience section. -->
-    <section id="experience" class="section">
-<!-- Labels the Experience section. -->
-      <h2>Experience</h2>
+<!-- Opens the Experience section, applies styling, and ties the section to its heading for assistive tech. -->
+    <section id="experience" class="section" aria-labelledby="experience-heading">
+<!-- Labels the Experience section and gives the heading an id for aria-labelledby. -->
+      <h2 id="experience-heading">Experience</h2>
 <!-- Opens an article to group a single job entry. -->
       <article class="job">
 <!-- Opens a header row for the job title and meta info. -->
@@ -96,10 +114,10 @@
       </article>
 <!-- Closes the Experience section. -->
     </section>
-<!-- Opens the Skills section. -->
-    <section id="skills" class="section">
-<!-- Labels the Skills section. -->
-      <h2>Skills</h2>
+<!-- Opens the Skills section, applies styling, and ties the section to its heading for assistive tech. -->
+    <section id="skills" class="section" aria-labelledby="skills-heading">
+<!-- Labels the Skills section and gives the heading an id for aria-labelledby. -->
+      <h2 id="skills-heading">Skills</h2>
 <!-- Starts a list of skill items. -->
       <ul>
 <!-- Adds a skill item. -->
@@ -112,22 +130,22 @@
       </ul>
 <!-- Closes the Skills section. -->
     </section>
-<!-- Opens the Projects section. -->
-    <section id="projects" class="section">
-<!-- Labels the Projects section. -->
-      <h2>Projects</h2>
+<!-- Opens the Projects section, applies styling, and ties the section to its heading for assistive tech. -->
+    <section id="projects" class="section" aria-labelledby="projects-heading">
+<!-- Labels the Projects section and gives the heading an id for aria-labelledby. -->
+      <h2 id="projects-heading">Projects</h2>
 <!-- Opens an article to group a single project entry. -->
       <article>
 <!-- Shows the project name. -->
         <h3>Sample Project</h3>
 <!-- Provides a one-sentence project summary. -->
-        <p>A short summary of what the project does.</p>
+        <p>this would be filled with an example project</p>
 <!-- Starts a list of project highlights. -->
         <ul>
 <!-- Adds a project highlight list item. -->
-          <li>What you built</li>
+          <li>On day I will have projects to put here</li>
 <!-- Adds another project highlight list item. -->
-          <li>What you focused on</li>
+          <li>one day...</li>
 <!-- Closes the project highlights list. -->
         </ul>
 <!-- Closes the project article. -->
@@ -136,8 +154,8 @@
     </section>
 <!-- Closes the main content region. -->
   </main>
-<!-- Opens the footer and applies the centered container class. -->
-  <footer class="container">
+<!-- Opens the footer, applies the centered container class, and marks it as site-wide content info. -->
+  <footer class="container" role="contentinfo">
 <!-- Shows the copyright line with the current year and name. -->
     <p>© 2025 David Nesca</p>
 <!-- Repeats the email address as a contact link. -->
