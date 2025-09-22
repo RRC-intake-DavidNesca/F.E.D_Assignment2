@@ -162,3 +162,23 @@ body{
   .container{ max-width: 1200px; }
 /* Closes the wide-screen media query. */
 }
+/* Marks the start of Step 5 rules to improve keyboard navigation and visibility. */
+.skip-link{
+/* Styles the skip link so it is visually hidden by default but still accessible to screen readers. */
+  position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden;
+/* Closes the default skip-link rule. */
+}
+/* Defines the visible style for the skip link when it receives keyboard focus. */
+.skip-link:focus{
+/* Places the element back into the normal flow so it becomes visible. */
+  position: static; width: auto; height: auto; margin: 1rem; display: inline-block;
+/* Gives the skip link a soft yellow background to make it obvious. */
+  background: #fde68a; padding: .5rem .75rem; border-radius: .5rem;
+/* Closes the visible skip-link focus rule. */
+}
+/* Highlights focused links and buttons with a thick high-contrast outline. */
+a:focus-visible, .btn:focus-visible{
+/* Specifies the outline thickness and colour for good visibility with an offset. */
+  outline: 3px solid #f59e0b; outline-offset: 3px;
+/* Closes the focus-visible rule. */
+}
