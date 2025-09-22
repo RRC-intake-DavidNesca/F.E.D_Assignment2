@@ -182,3 +182,13 @@ a:focus-visible, .btn:focus-visible{
   outline: 3px solid #f59e0b; outline-offset: 3px;
 /* Closes the focus-visible rule. */
 }
+/* Marks Step 6 refinements, focusing on print output and minor adjustments. */
+@media print{
+/* Removes visual effects in print for a clean, ink-friendly page. */
+  .section, .job{ box-shadow: none; border: none; background: #fff; }
+/* Forces the main area to a single column for predictable page breaks. */
+  main.container{ display: block !important; }
+/* Prevents browsers from auto-appending raw URLs after links. */
+  a::after{ content: ""; }
+/* Closes the print media query. */
+}
