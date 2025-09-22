@@ -131,6 +131,6 @@ main.container{
 /* Closes job header flex rule. */
   gap: 1rem;
 /* This line sets or adjusts a CSS rule or property. */
-  flex-wrap: wrp;
+  flex-wrap: wrap;
 /* This line sets or adjusts a CSS rule or property. */
 }
