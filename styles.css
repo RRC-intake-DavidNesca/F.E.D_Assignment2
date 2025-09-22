@@ -55,6 +55,51 @@ img{ max-width:100%; display:block; }
 /* Styles small 'meta' text with a muted colour. */
 .meta{ color: var(--muted); }
 
+/* Provides a small in-page navigation area below the header. */
+.site-nav{
+/* Adds compact top/bottom spacing around the nav. */
+  padding-block: .25rem .75rem;
+/* Closes the site-nav rule. */
+}
+/* Removes default bullets and lays out the nav links in a row that wraps if needed. */
+.nav-list{
+/* Removes default list bullets. */
+  list-style:none;
+/* Clears default list padding. */
+  padding:0;
+/* Clears default list margin. */
+  margin:0;
+/* Uses flexbox to arrange nav items horizontally. */
+  display:flex;
+/* Adds space between items. */
+  gap:.5rem;
+/* Allows items to wrap on narrow screens. */
+  flex-wrap:wrap;
+/* Closes the nav-list rule. */
+}
+/* Styles each nav link as a small pill for better tap targets. */
+.nav-list a{
+/* Makes the link render as an inline block for padding. */
+  display:inline-block;
+/* Adds internal padding for click/tap comfort. */
+  padding:.35rem .6rem;
+/* Adds a thin border to match the card style. */
+  border:1px solid var(--border);
+/* Rounds the corners slightly. */
+  border-radius:.5rem;
+/* Uses a white background to match the cards. */
+  background:#fff;
+/* Removes the default underline for a cleaner look. */
+  text-decoration:none;
+/* Closes the nav-list link rule. */
+}
+/* Shows an underline when hovering or focusing a nav link to signal interactivity. */
+.nav-list a:hover, .nav-list a:focus{
+/* Restores underline on hover/focus for clarity. */
+  text-decoration:underline;
+/* Closes the hover/focus rule. */
+}
+
 /* Marks the beginning of Step 2 styles that control layout and positioning. */
 .header-inner{
 /* Targets the header inner wrapper to turn it into a grid container. */
