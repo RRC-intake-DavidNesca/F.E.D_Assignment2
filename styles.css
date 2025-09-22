@@ -192,3 +192,7 @@ a:focus-visible, .btn:focus-visible{
   a::after{ content: ""; }
 /* Closes the print media query. */
 }
+/* Marks Step 7 polish for hover feedback and heading spacing. */
+a:hover{ text-decoration-thickness: 2px; }
+/* Normalizes section heading spacing for visual consistency. */
+h2{ margin: 0 0 .75rem; }
