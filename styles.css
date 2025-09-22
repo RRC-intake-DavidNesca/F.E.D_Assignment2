@@ -54,3 +54,83 @@ img{ max-width:100%; display:block; }
 .section{ padding-block: 1rem; border-top: 1px solid var(--border); }
 /* Styles small 'meta' text with a muted colour. */
 .meta{ color: var(--muted); }
+/* Marks Step 2 layout rules. */
+/* Layout & Positioning */
+/* Turns the header inner wrapper into a grid container. */
+.header-inner{
+/* Enables grid layout for stable header positioning. */
+  display: grid;
+/* Defines avatar and identity columns. */
+  grid-template-columns: 120px 1fr;
+/* Adds column gap for spacing. */
+  gap: 1.25rem;
+/* Centers items vertically in the header. */
+  align-items: center;
+/* Adds vertical padding for breathing room. */
+  padding-block: 2rem;
+/* Closes header grid rule. */
+}
+/* Upsizes the avatar for the grid layout. */
+.avatar{
+/* Sets avatar width to 120px. */
+  width: 120px;
+/* Sets avatar height to 120px to keep it square. */
+  height: 120px;
+/* Ensures the image fills its frame without distortion. */
+  object-fit: cover;
+/* Rounds the avatar into a circle. */
+  border-radius: 50%;
+/* Closes avatar rule. */
+}
+/* Turns main content into a grid to enable future multi-column layout. */
+main.container{
+/* Enables grid layout on the main container. */
+  display: grid;
+/* Starts with a single column for mobile-first design. */
+  grid-template-columns: 1fr;
+/* Adds consistent gap between grid tracks. */
+  gap: 1.25rem;
+/* Adds vertical padding to separate content from header/footer. */
+  padding-block: 1.5rem;
+/* Closes main grid rule. */
+}
+/* Styles sections as light cards using the surface colour. */
+.section{
+/* Adds a light border around each section card. */
+  background: var(--surface);
+/* Rounds card corners for a softer look. */
+  border: 1px solid var(--border);
+/* Adds inner padding inside the section card. */
+  border-radius: 12px;
+/* Closes section card rule. */
+  padding: 1rem 1.25rem;
+/* Styles each job entry as its own white card. */
+}
+/* Keeps a crisp white background inside job cards. */
+.job{
+/* Adds a subtle border around job cards. */
+  background: #fff;
+/* Rounds job card corners. */
+  border: 1px solid var(--border);
+/* Adds inner padding for comfortable reading. */
+  border-radius: 12px;
+/* Adds a small top margin to separate the job card from the section heading. */
+  padding: .75rem 1rem;
+/* Closes job card rule. */
+  margin-top: .5rem;
+/* Uses flexbox to place the job title and meta on one line when space allows. */
+}
+/* Pushes title and meta apart to opposite sides when there is room. */
+.job-header{
+/* Aligns the baseline of the text for a neat look. */
+  display: flex;
+/* Adds spacing between items to prevent crowding. */
+  justify-content: space-between;
+/* Allows wrapping to the next line on smaller screens. */
+  align-items: baseline;
+/* Closes job header flex rule. */
+  gap: 1rem;
+/* This line sets or adjusts a CSS rule or property. */
+  flex-wrap: wrp;
+/* This line sets or adjusts a CSS rule or property. */
+}
