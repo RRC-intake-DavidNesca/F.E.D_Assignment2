@@ -1,0 +1,56 @@
+/* Defines CSS variables for colours and surfaces used across the site. */
+:root{
+/* Sets the page background to white for a clean base. */
+  --bg:#ffffff;
+/* Sets the default text colour to very dark gray for strong contrast. */
+  --text:#111827;
+/* Defines a muted gray used for secondary text like dates. */
+  --muted:#6b7280;
+/* Defines a blue accent used for interactive elements and links. */
+  --accent:#2563eb;
+/* Defines a light surface colour for subtle card backgrounds. */
+  --surface:#f8fafc;
+/* Defines a light gray border colour for separators. */
+  --border:#e5e7eb;
+/* Closes the variables block. */
+}
+/* Uses border-box sizing so padding and borders don't expand widths unexpectedly. */
+*{ box-sizing:border-box; }
+/* Removes default margin and padding from the root elements. */
+html,body{ margin:0; padding:0; }
+/* Opens base text and background styling for the page body. */
+body{
+/* Uses fast, built-in system fonts for now (custom fonts come later). */
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+/* Sets comfortable line height for readability. */
+  line-height: 1.6;
+/* Applies the base text colour to the body. */
+  color: var(--text);
+/* Applies the background colour to the body. */
+  background: var(--bg);
+/* Closes the body rule. */
+}
+/* Opens the centered container styling. */
+.container{
+/* Limits line length for readability on wide screens. */
+  max-width: 1000px;
+/* Centers the container in the viewport. */
+  margin-inline: auto;
+/* Adds inner padding so content doesn't touch edges. */
+  padding: 1rem;
+/* Closes the container rule. */
+}
+/* Tightens default heading spacing to improve layout rhythm. */
+h1,h2,h3{ margin: 0 0 .5rem; }
+/* Sets a consistent paragraph margin for readable blocks of text. */
+p{ margin: .5rem 0 .85rem; }
+/* Styles links with the accent colour and better underline offset. */
+a{ color: var(--accent); text-underline-offset: 3px; }
+/* Ensures images scale with their containers and behave as block elements. */
+img{ max-width:100%; display:block; }
+/* Sets initial small circular avatar sizing. */
+.avatar{ width:100px; height:100px; object-fit:cover; border-radius:50%; }
+/* Adds a simple top border to visually separate sections. */
+.section{ padding-block: 1rem; border-top: 1px solid var(--border); }
+/* Styles small 'meta' text with a muted colour. */
+.meta{ color: var(--muted); }

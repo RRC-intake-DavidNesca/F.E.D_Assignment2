@@ -1,179 +1,146 @@
-<!-- Declares the document uses HTML5 -->
+<!-- Declares the HTML5 document type for standards-compliant rendering. -->
 <!DOCTYPE html>
-<!-- Opens the root HTML element and sets the page language to English -->
+<!-- Opens the HTML document and sets English as the language. -->
 <html lang="en">
-  <!-- Begins the head; metadata not shown directly on the page -->
-  <head>
-    <!-- Sets character encoding so text renders correctly -->
-    <meta charset="utf-8">
-    <!-- Enables responsive scaling on phones and tablets -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Short description for search engines and assistive tech -->
-    <meta name="description" content="Personal Resume for David Nesca">
-    <!-- Text shown in the browser tab -->
-    <title>David Nesca — Resume</title>
-  <!-- Ends the head section -->
-  </head>
-
-  <!-- Begins the visible page content -->
-  <body>
-    <!-- Keyboard-friendly skip link to jump to the main content -->
-    <a href="#main-content">Skip to main content</a>
-
-    <!-- Header holds your name, contact links, and profile image -->
-    <header>
-      <!-- Main page heading: your name -->
-      <h1>David Nesca</h1>
-
-      <!-- Contact links; keep text short and clear -->
-      <p>
-        <a href="mailto:dnesca@rrc.ca">dnesca@rrc.ca</a> ·
-        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN">LinkedIn</a> ·
-        <a href="https://github.com/YOUR-GITHUB">GitHub</a>
-      </p>
-
-      <!-- Figure groups the image and its caption -->
-      <figure>
-        <!-- Profile image with meaningful alternative text and simple width -->
+<!-- Opens the head where metadata and linked resources live. -->
+<head>
+<!-- Specifies UTF-8 character encoding. -->
+  <meta charset="utf-8">
+<!-- Sets the viewport so the layout adapts to mobile screens. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Provides a short description used by search engines and previews. -->
+  <meta name="description" content="Personal Resume for David Nesca">
+<!-- Sets the browser tab title for the page. -->
+  <title>David Nesca — Resume</title>
+<!-- Links the external stylesheet that contains all CSS rules. -->
+  <link rel="stylesheet" href="styles.css">
+<!-- Closes the head and opens the visible page content. -->
+</head>
+<!-- Begins the visible page body. -->
+<body>
+<!-- Opens the page header and applies a centered container class. -->
+  <header class="container">
+<!-- Creates an inner wrapper for header layout. -->
+    <div class="header-inner">
+<!-- Opens a wrapper for the profile photo. -->
+      <div class="avatar-wrap">
+<!-- Displays the profile photo with descriptive alternative text for screen readers. -->
         <img src="Images/Image1.jpg" alt="Headshot of David Nesca" width="160">
-        <!-- Short caption for the image -->
-        <figcaption>Profile photo</figcaption>
-      </figure>
-    </header>
-
-    <!-- Primary navigation for in-page sections -->
-    <nav aria-label="Primary">
-      <!-- Unordered list that groups the nav items -->
+<!-- Closes the avatar wrapper. -->
+      </div>
+<!-- Opens the identity block that holds name and contact details. -->
+      <div class="identity">
+<!-- Shows the user's name as the main heading. -->
+        <h1>David Nesca</h1>
+<!-- Adds a brief role or tagline in muted styling. -->
+        <p class="meta">Frontend Development Student</p>
+<!-- Displays the clickable email address for quick contact. -->
+        <p class="meta contact"><a href="mailto:dnesca@rrc.ca">dnesca@rrc.ca</a></p>
+<!-- Closes the identity block. -->
+      </div>
+<!-- Closes the header inner wrapper. -->
+    </div>
+<!-- Closes the header section. -->
+  </header>
+<!-- Opens the main content region and sets an id to support skip links. -->
+  <main class="container" id="main">
+<!-- Starts the About section and applies section styling hooks. -->
+    <section id="about" class="section">
+<!-- Names the section with a heading for screen readers and structure. -->
+      <h2>About</h2>
+<!-- Adds the first paragraph of the About blurb. -->
+      <p>I am studying frontend development and practicing clean, accessible layouts.</p>
+<!-- Adds a second paragraph of the About blurb. -->
+      <p>This resume demonstrates semantic HTML and CSS fundamentals.</p>
+<!-- Closes the About section. -->
+    </section>
+<!-- Opens the Education section. -->
+    <section id="education" class="section">
+<!-- Labels the Education section. -->
+      <h2>Education</h2>
+<!-- Starts a list of education highlights. -->
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
+<!-- Adds an education highlight list item. -->
+        <li>Relevant coursework or focus area.</li>
+<!-- Adds another education highlight list item. -->
+        <li>Any award or notable achievement.</li>
+<!-- Closes the education list. -->
       </ul>
-    </nav>
-
-    <!-- Main landmark that contains the core content -->
-    <main id="main-content">
-      <!-- About section introduces you -->
-      <section id="about">
-        <!-- Section heading -->
-        <h2>About</h2>
-        <!-- Brief paragraph about your focus -->
-        <p>I am a student learning frontend development. I like clear, readable code and simple layouts.</p>
-        <!-- Brief paragraph about the purpose of this page -->
-        <p>I am building this resume to practice semantic HTML and accessibility basics.</p>
-      </section>
-
-      <!-- Education section lists your schooling -->
-      <section id="education">
-        <!-- Section heading -->
-        <h2>Education</h2>
-
-        <!-- One education entry -->
-        <article>
-          <!-- Program and school name (ampersand encoded for validity) -->
-          <h3>AD&amp;D — Red River</h3>
-          <!-- Location and dates -->
-          <p>Winnipeg, MB · 2024 to Present</p>
-          <!-- Details as short bullet points -->
-          <ul>
-            <!-- Coursework or focus area -->
-            <li>Relevant coursework or focus area.</li>
-            <!-- Awards or notable achievements -->
-            <li>Any award or notable achievement.</li>
-          </ul>
-        <!-- Ends education entry -->
-        </article>
-      <!-- Ends Education section -->
-      </section>
-
-      <!-- Experience section lists roles or relevant work -->
-      <section id="experience">
-        <!-- Section heading -->
-        <h2>Experience</h2>
-
-        <!-- One experience entry -->
-        <article>
-          <!-- Role and organization -->
-          <h3>Placement home manager — New Directions</h3>
-          <!-- Dates and location -->
-          <p>2023 to present · Winnipeg, MB</p>
-          <!-- Responsibilities/results as short bullets -->
-          <ul>
-            <!-- Specific responsibility with context -->
-            <li>Worked in group home with youth in the foster system, using a custom software to manage events and medication schedules.</li>
-            <!-- Another concise responsibility/result -->
-            <li>Another concrete responsibility or result.</li>
-          </ul>
-        <!-- Ends experience entry -->
-        </article>
-
-      <!-- Ends Experience section -->
-      </section>
-
-      <!-- Skills section lists key abilities and includes an inline SVG icon -->
-      <section id="skills">
-        <!-- Section heading with an accessible inline SVG icon -->
-        <h2>
-          <!-- SVG icon labeled for assistive technologies -->
-          <svg width="20" height="20" viewBox="0 0 24 24" role="img" aria-label="Star icon">
-            <!-- Star shape as a polygon -->
-            <polygon points="12,2 15,9 22,9 16.5,13.5 18.5,21 12,16.8 5.5,21 7.5,13.5 2,9 9,9"></polygon>
-          </svg>
-          <!-- Visible section title -->
-          Skills
-        </h2>
-        <!-- Short list of skills -->
+<!-- Closes the Education section. -->
+    </section>
+<!-- Opens the Experience section. -->
+    <section id="experience" class="section">
+<!-- Labels the Experience section. -->
+      <h2>Experience</h2>
+<!-- Opens an article to group a single job entry. -->
+      <article class="job">
+<!-- Opens a header row for the job title and meta info. -->
+        <div class="job-header">
+<!-- Shows the job title and employer. -->
+          <h3>Recent Role — Organization</h3>
+<!-- Shows the dates and location in muted text. -->
+          <p class="meta">Year–Year · City</p>
+<!-- Closes the job header row. -->
+        </div>
+<!-- Starts a list of responsibilities and outcomes. -->
         <ul>
-          <!-- Semantic HTML as a skill -->
-          <li>HTML (semantic structure)</li>
-          <!-- Accessibility awareness as a skill -->
-          <li>Accessibility basics</li>
-          <!-- Soft skills -->
-          <li>Communication and teamwork</li>
+<!-- Adds a responsibility or result list item. -->
+          <li>I need to add this :P</li>
+<!-- Closes the job bullet list. -->
         </ul>
-      <!-- Ends Skills section -->
-      </section>
-
-      <!-- Projects section highlights your work -->
-      <section id="projects">
-        <!-- Section heading -->
-        <h2>Projects</h2>
-
-        <!-- One project entry -->
-        <article>
-          <!-- Project title -->
-          <h3>Portfolio Site</h3>
-          <!-- One-line summary -->
-          <p>I have an undergrad degree in philosophy, but found that it was not very lucrative as other options. Now I am coding in html and working towards a different career!</p>
-          <!-- Project details as concise bullets -->
-          <ul>
-            <!-- Structure and approach -->
-            <li>Planned the page structure with semantic HTML.</li>
-            <!-- Focus on clarity -->
-            <li>Focused on clear headings and readable content.</li>
-            <!-- Personal interest note -->
-            <li>Otherwise I can talk for hours on the philosophy of existence, political philosophies, and language of logic.</li>
-          </ul>
-        <!-- Ends project entry -->
-        </article>
-
-      <!-- Ends Projects section -->
-      </section>
-
-    <!-- Ends main content -->
-    </main>
-
-    <!-- Footer contains page‑end information -->
-    <footer>
-      <!-- Copyright :) -->
-      <p>© 2025 David Nesca</p>
-      <!-- Email link for easy contact -->
-      <p><a href="mailto:dnesca@rrc.ca">dnesca@rrc.ca</a></p>
-    <!-- Ends footer -->
-    </footer>
-  <!-- Ends body -->
-  </body>
-<!-- Ends the HTML document -->
+<!-- Closes the job article element. -->
+      </article>
+<!-- Closes the Experience section. -->
+    </section>
+<!-- Opens the Skills section. -->
+    <section id="skills" class="section">
+<!-- Labels the Skills section. -->
+      <h2>Skills</h2>
+<!-- Starts a list of skill items. -->
+      <ul>
+<!-- Adds a skill item. -->
+        <li>HTML (semantic structure)</li>
+<!-- Adds a skill item. -->
+        <li>Accessibility basics</li>
+<!-- Adds a skill item. -->
+        <li>Communication and teamwork</li>
+<!-- Closes the skill list. -->
+      </ul>
+<!-- Closes the Skills section. -->
+    </section>
+<!-- Opens the Projects section. -->
+    <section id="projects" class="section">
+<!-- Labels the Projects section. -->
+      <h2>Projects</h2>
+<!-- Opens an article to group a single project entry. -->
+      <article>
+<!-- Shows the project name. -->
+        <h3>Sample Project</h3>
+<!-- Provides a one-sentence project summary. -->
+        <p>A short summary of what the project does.</p>
+<!-- Starts a list of project highlights. -->
+        <ul>
+<!-- Adds a project highlight list item. -->
+          <li>What you built</li>
+<!-- Adds another project highlight list item. -->
+          <li>What you focused on</li>
+<!-- Closes the project highlights list. -->
+        </ul>
+<!-- Closes the project article. -->
+      </article>
+<!-- Closes the Projects section. -->
+    </section>
+<!-- Closes the main content region. -->
+  </main>
+<!-- Opens the footer and applies the centered container class. -->
+  <footer class="container">
+<!-- Shows the copyright line with the current year and name. -->
+    <p>© 2025 David Nesca</p>
+<!-- Repeats the email address as a contact link. -->
+    <p><a href="mailto:dnesca@rrc.ca">dnesca@rrc.ca</a></p>
+<!-- Closes the footer. -->
+  </footer>
+<!-- Closes the page body. -->
+</body>
+<!-- Closes the HTML document. -->
 </html>
