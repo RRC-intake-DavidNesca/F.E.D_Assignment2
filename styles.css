@@ -20,7 +20,7 @@
 html,body{ margin:0; padding:0; }
 /* Opens base text and background styling for the page body. */
 body{
-/* Uses fast, built-in system fonts for now (custom fonts come later). */
+/* Uses a system stack initially; Step 3 overrides with Inter. */
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 /* Sets comfortable line height for readability. */
   line-height: 1.6;
@@ -54,94 +54,93 @@ img{ max-width:100%; display:block; }
 .section{ padding-block: 1rem; border-top: 1px solid var(--border); }
 /* Styles small 'meta' text with a muted colour. */
 .meta{ color: var(--muted); }
-/* Marks Step 2 layout rules. */
-/* Layout & Positioning */
-/* Turns the header inner wrapper into a grid container. */
+
+/* Marks the beginning of Step 2 styles that control layout and positioning. */
 .header-inner{
-/* Enables grid layout for stable header positioning. */
+/* Targets the header inner wrapper to turn it into a grid container. */
   display: grid;
-/* Defines avatar and identity columns. */
+/* Defines two header columns: fixed width for the avatar and flexible space for identity. */
   grid-template-columns: 120px 1fr;
-/* Adds column gap for spacing. */
+/* Adds space between the two header columns. */
   gap: 1.25rem;
-/* Centers items vertically in the header. */
+/* Vertically centers the items within the header grid. */
   align-items: center;
-/* Adds vertical padding for breathing room. */
+/* Applies extra vertical padding to give the header breathing room. */
   padding-block: 2rem;
-/* Closes header grid rule. */
+/* Closes the header-inner rule. */
 }
-/* Upsizes the avatar for the grid layout. */
+/* Adjusts the avatar size for the new grid layout. */
 .avatar{
-/* Sets avatar width to 120px. */
+/* Sets the avatar image width to 120 pixels for better presence on desktop. */
   width: 120px;
-/* Sets avatar height to 120px to keep it square. */
+/* Sets the avatar image height to 120 pixels to match the width for a perfect circle. */
   height: 120px;
-/* Ensures the image fills its frame without distortion. */
+/* Ensures the image fills its box without distortion. */
   object-fit: cover;
-/* Rounds the avatar into a circle. */
+/* Rounds the avatar image into a circle. */
   border-radius: 50%;
-/* Closes avatar rule. */
+/* Closes the avatar rule. */
 }
-/* Turns main content into a grid to enable future multi-column layout. */
+/* Turns the main content container into a grid to allow future multi-column layouts. */
 main.container{
-/* Enables grid layout on the main container. */
+/* Enables grid layout inside the main container. */
   display: grid;
-/* Starts with a single column for mobile-first design. */
+/* Starts with a single-column layout (mobile-first). */
   grid-template-columns: 1fr;
-/* Adds consistent gap between grid tracks. */
+/* Adds consistent gaps between grid rows and columns. */
   gap: 1.25rem;
-/* Adds vertical padding to separate content from header/footer. */
+/* Adds vertical padding to the main content area. */
   padding-block: 1.5rem;
-/* Closes main grid rule. */
+/* Closes the main container grid rule. */
 }
-/* Styles sections as light cards using the surface colour. */
+/* Turns each section into a subtle card with a soft background. */
 .section{
-/* Adds a light border around each section card. */
+/* Adds a light border to separate the section from the background. */
   background: var(--surface);
-/* Rounds card corners for a softer look. */
+/* Adds a light border to separate the section from the background. */
   border: 1px solid var(--border);
-/* Adds inner padding inside the section card. */
+/* Rounds the section corners to soften the look. */
   border-radius: 12px;
-/* Closes section card rule. */
+/* Adds inner padding to create space around the section content. */
   padding: 1rem 1.25rem;
-/* Styles each job entry as its own white card. */
+/* Closes the section card rule. */
 }
-/* Keeps a crisp white background inside job cards. */
+/* Styles each job entry like a card to separate it from other content. */
 .job{
-/* Adds a subtle border around job cards. */
+/* Uses a white background to keep the job content crisp and readable. */
   background: #fff;
-/* Rounds job card corners. */
+/* Adds a light border around the job card. */
   border: 1px solid var(--border);
-/* Adds inner padding for comfortable reading. */
+/* Rounds the job card corners. */
   border-radius: 12px;
-/* Adds a small top margin to separate the job card from the section heading. */
+/* Adds padding inside the job card for comfortable spacing. */
   padding: .75rem 1rem;
-/* Closes job card rule. */
+/* Adds a small top margin to separate the job card from the section heading. */
   margin-top: .5rem;
-/* Uses flexbox to place the job title and meta on one line when space allows. */
+/* Closes the job card rule. */
 }
-/* Pushes title and meta apart to opposite sides when there is room. */
+/* Uses flexbox to lay out the job title and meta information on one line. */
 .job-header{
-/* Aligns the baseline of the text for a neat look. */
+/* Enables flex layout in the job header. */
   display: flex;
-/* Adds spacing between items to prevent crowding. */
+/* Distributes space so the title and meta sit at opposite ends when room allows. */
   justify-content: space-between;
-/* Allows wrapping to the next line on smaller screens. */
+/* Aligns the bottom of the title and meta text for a neat baseline. */
   align-items: baseline;
-/* Closes job header flex rule. */
+/* Adds a gap between items to avoid crowding. */
   gap: 1rem;
-/* This line sets or adjusts a CSS rule or property. */
+/* Allows the header items to wrap on small screens instead of overflowing. */
   flex-wrap: wrap;
-/* This line sets or adjusts a CSS rule or property. */
+/* Closes the job header flex rule. */
 }
-/* Marks Step 3 font customization rules. */
-/* Custom Fonts */
-/* Reopens the body rule to apply the custom font stack. */
+
+/* Marks the beginning of Step 3 styles that apply the chosen custom font. */
 body{
-/* Sets Inter as the primary font with safe fallbacks. */
+/* Sets Inter as the primary font for a modern, readable look while keeping fallbacks. */
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-/* Closes the body font rule. */
+/* Closes the body rule used for the font override. */
 }
+
 /* Marks the beginning of Step 4 responsive rules. */
 @media (min-width: 600px){
 /* On tablets, keeps two columns in the header and restores generous spacing. */
@@ -162,6 +161,7 @@ body{
   .container{ max-width: 1200px; }
 /* Closes the wide-screen media query. */
 }
+
 /* Marks the start of Step 5 rules to improve keyboard navigation and visibility. */
 .skip-link{
 /* Styles the skip link so it is visually hidden by default but still accessible to screen readers. */
@@ -182,6 +182,7 @@ a:focus-visible, .btn:focus-visible{
   outline: 3px solid #f59e0b; outline-offset: 3px;
 /* Closes the focus-visible rule. */
 }
+
 /* Marks Step 6 refinements, focusing on print output and minor adjustments. */
 @media print{
 /* Removes visual effects in print for a clean, ink-friendly page. */
@@ -192,7 +193,8 @@ a:focus-visible, .btn:focus-visible{
   a::after{ content: ""; }
 /* Closes the print media query. */
 }
-/* Marks Step 7 polish for hover feedback and heading spacing. */
+
+/* Marks Step 7 gentle polish for hover feedback and heading spacing. */
 a:hover{ text-decoration-thickness: 2px; }
 /* Normalizes section heading spacing for visual consistency. */
 h2{ margin: 0 0 .75rem; }
